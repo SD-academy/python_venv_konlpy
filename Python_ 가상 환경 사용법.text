@@ -1,0 +1,69 @@
+# (powershell을 사용하려면, Activate.ps1에서 주석 풀고, 값 설정을 다시 해야하기 때문에 cmd 기준으로 설명드리는 점 양해바랍니다.)
+
+# pip install
+  # open cmd
+  # check current dir is [project path]\Scripts
+  # type activate
+  # if you just make this venv dir, type python pip install --upgrade pip
+  # if you already made this venv dir or after upgrade pip, type pip install [packages that you want]
+  # type deactivate
+  # type exit
+
+# pip 설치
+  # 사용하는 terminal창을 엽니다.(cmd)
+  # 현재 디렉토리가 프로젝트를 위한 가상환경 경로의 Scripts인지 확인합니다.(아니라면 cd [project path]\Scripts)로 바꿔줍니다.
+  # activate를 타이핑하여 가상환경을 활성화 시킵니다.
+  # 처음 새로운 가상환경 디렉토리를 만든 경우에는 python pip install --upgrade pip를 입력하여 pip upgrade를 먼저 해야합니다.
+  # 기존의 가상환경 디렉토리에서 pip install로 추가하는 경우에는 pip install [packages that you want]를 입력하여 설치합니다.
+    #참고
+      # pip list를 입력하면 설치받은 pip 목록을 확인할 수 있습니다. 
+      # pip show [packages that you installed]를 입력하면, 설치된 pip의 상세 정보를 확인할 수 있습니다.
+  # deactivate를 입력하여 가상환경을 비활성화 시킵니다.
+  
+# vscode
+  # open Scripts folder or open [project path] folder move Scripts using command prompt in VScode
+    #after make [newfile].py in [project path]\Scripts Folder, write down codes you want to run and save that
+  # terminal in VScode should swap powershell to command prompt
+    #check current dir is [project path]\Scripts
+    #check command prompt show ([project dir name]) [project path]\Scripts
+    #type activate
+    #if you want to run specific python file, type python [newfile/specific name].py
+    #once you edited [newfile].py in VScode, press ctrl/cmd+s
+    #click activate terminal(which is command prompt), press ⬆. Then the terminal show us last command that you typed just before.
+  # deactivate
+
+# vscode
+  # 사용할 가상환경 내의 Scripts 폴더를 열거나, 가상환경 폴더를 열어 vscode내의 터미널에서 이동하는 방식을 사용할 수 있습니다.
+    # 새로운 파이썬 파일을 Scripts 폴더 안에 만든 뒤, 원하는 코드를 입력합니다.(단, 사용하고자 하는 패키지가 있다면 cmd에서 활성화한 뒤 패키지를 설치하고 vscode를 다시 열어야 합니다.)
+  # VScode의 terminal을 powershell에서 command prompt로 변경합니다. 아니면 아예 터미널 default를 command prompt로 설정하는 방법도 있습니다.
+    # vscode 터미널 창 위치가 [project path]\Scripts인지 확인합니다
+    # 활성화를 위해 activate를 입력합니다.
+    # Scripts 안의 특정 파이썬 파일을 실행하고자 하면, 터미널 창에서 python  [newfile/specific name].py를 입력합니다.
+    # 코드 수정이 있었다면, 파이썬을 실행하기 전 무조건 저장해야 합니다.
+    # 위쪽 화살표 방향키를 누르면 방금 전 실행한 코드를 그대로 부를 수 있습니다.
+      #활용방법은 다양하지만 간단한 예를 들면,
+        # somedata_catboost.py, somedata_xgboost.py를 생성하고 vscode를 파일목록 우측에 있는 아이콘을 클릭하여 듀얼 창 엽니다.
+        # 터미널 창도 듀얼창으로 연 뒤, 가상환경을 활성화를 시킵니다.
+        # 각 파일 내의 하이퍼파라미터를 조정하여, 값 비교를 동시에 볼 수 있습니다.
+          
+# jupyter
+  # open cmd
+  # check current dir is [project path]\Scripts
+  # type activate
+  # type pip install jupyter
+  # type jupyter notebook
+    # while using jupyter, you shouldn't exit cmd
+  # if jupyter dosen't work, type ipython profile create
+    # type jupyter notebook
+  # after using jupyter, exit cmd
+
+# jupyter
+  # 아나콘다를 쓰시는 분에게는 죄송하지만,,, 제가 아나콘다는 사용할 생각이 없어서 아나콘다의 jupyter경로 잡는 부분은 잘 모릅니다.
+  # cmd창을 열고 디렉토리 위치를 확인합니다. [project path]\Scripts가 아니라면 이동합니다.
+  # 활성화를 한 뒤, pip install jupyter로 패키지부터 설치합니다.
+  # jupyter notebook를 입력하면 jupyter창이 뜨는데 만약 창이 열리지 않는다면 ipython profile create를 입력합니다.
+    # jupyter를 사용하는 동안에는 cmd 창을 끄시면 안됩니다.
+    # 인터넷 브라우저로 연결된 jupyter창을 껐는데, 다시 수정사항이 생긴다면 cmd창의 copy and paste one of these URLs:에 적힌 링크를 주소창에 붙여넣으면 됩니다.
+    # jupyter 사용이 끝났다면, cmd창을 끄셔도 됩니다.
+
+# 본인에게 최적화된 방법은 정말 다양하고, 활용 방법도 다양하기 때문에 강사님께서 말하셨던 바와 같이 시도해보고 오류를 만났을 때 구글링이 중요하지만 시행착오를 최대한 덜 겪으셨으면 해서 정리했습니다.
